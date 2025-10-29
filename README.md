@@ -61,5 +61,5 @@ BankSystemApp_CSharp
 Mohammed Laidi  <br/>
 💼 C# Developer | .NET | SQL Server  <br/>
 📧 mohammedlaidi56@gmail.com  <br/>
-🌐linkedin.com/in/mohammed-laidi-7208a2365 
+🌐[linkedin.com/in/mohammed-laidi-7208a2365 ](https://www.linkedin.com/in/mohammed-laidi-7208a2365/)
 

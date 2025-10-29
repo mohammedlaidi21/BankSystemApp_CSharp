@@ -38,14 +38,14 @@ This project follows the **3-Tier Architecture (DAL - BL - PL)** and uses **SQL 
  <h2>🧩 Architecture</h2>
 
 BankSystemApp_CSharp
-├── 🗂️ DAL (Data Access Layer)
-│ └── Database interaction using SQL commands
-├── 🧠 BL (Business Logic Layer)
-│ └── Business classes for Clients, Accounts, Users, etc.
-├── 💻 PL (Presentation Layer)
-│ └── Windows Forms UI for all modules
-└── 🗄️ Database
-└── SQL Server with normalized schema and foreign keys
+├── 🗂️ DAL (Data Access Layer) <br/>
+│ └── Database interaction using SQL commands  <br/>
+├── 🧠 BL (Business Logic Layer)  <br/>
+│ └── Business classes for Clients, Accounts, Users, etc.  <br/>
+├── 💻 PL (Presentation Layer)  <br/>
+│ └── Windows Forms UI for all modules  <br/>
+└── 🗄️ Database  <br/>
+└── SQL Server with normalized schema and foreign keys  <br/>
 
 <h2>⚙️ Technologies Used</h2>
 
@@ -58,8 +58,8 @@ BankSystemApp_CSharp
 
 <h2>👨‍💻 Author</h2>
 
-Mohammed Laidi
-💼 C# Developer | .NET | SQL Server
-📧 mohammedlaidi56@gmail.com
-🌐linkedin.com/in/mohammed-laidi-7208a2365
+Mohammed Laidi  <br/>
+💼 C# Developer | .NET | SQL Server  <br/>
+📧 mohammedlaidi56@gmail.com  <br/>
+🌐linkedin.com/in/mohammed-laidi-7208a2365 
 

@@ -36,6 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearchUser = new System.Windows.Forms.TextBox();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
+            this.cmsUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tpAddNewUser = new System.Windows.Forms.TabPage();
             this.btnAddNewUser = new System.Windows.Forms.Button();
             this.gpPermissions = new System.Windows.Forms.GroupBox();
@@ -89,11 +91,10 @@
             this.txtSearchLogins = new System.Windows.Forms.TextBox();
             this.dgvLoginsRegisters = new System.Windows.Forms.DataGridView();
             this.epUser = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cmsUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tpShowUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
+            this.cmsUsers.SuspendLayout();
             this.tpAddNewUser.SuspendLayout();
             this.gpPermissions.SuspendLayout();
             this.pPermissions.SuspendLayout();
@@ -103,7 +104,6 @@
             this.tpLoginRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoginsRegisters)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epUser)).BeginInit();
-            this.cmsUsers.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -198,6 +198,21 @@
             this.dgvUsers.TabIndex = 10;
             this.dgvUsers.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentDoubleClick);
             this.dgvUsers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellDoubleClick);
+            // 
+            // cmsUsers
+            // 
+            this.cmsUsers.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.cmsUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteToolStripMenuItem});
+            this.cmsUsers.Name = "cmsUsers";
+            this.cmsUsers.Size = new System.Drawing.Size(135, 36);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(134, 32);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // tpAddNewUser
             // 
@@ -392,7 +407,7 @@
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(283, 38);
-            this.txtUsername.TabIndex = 35;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtInput_Validating);
             // 
             // txtFirstnameUser
@@ -822,21 +837,6 @@
             // 
             this.epUser.ContainerControl = this;
             // 
-            // cmsUsers
-            // 
-            this.cmsUsers.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.cmsUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deleteToolStripMenuItem});
-            this.cmsUsers.Name = "cmsUsers";
-            this.cmsUsers.Size = new System.Drawing.Size(241, 69);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
             // frmManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
@@ -852,6 +852,7 @@
             this.tpShowUsers.ResumeLayout(false);
             this.tpShowUsers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
+            this.cmsUsers.ResumeLayout(false);
             this.tpAddNewUser.ResumeLayout(false);
             this.tpAddNewUser.PerformLayout();
             this.gpPermissions.ResumeLayout(false);
@@ -868,7 +869,6 @@
             this.tpLoginRegister.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoginsRegisters)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epUser)).EndInit();
-            this.cmsUsers.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

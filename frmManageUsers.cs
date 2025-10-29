@@ -45,7 +45,7 @@ namespace BankSystem_Currencies
         {
             _LoadUsersInDataGrid();
             _LoadLoginsRegisterInDataGrid();
-
+            //this.ActiveControl = txtUsername;
             if (rbYesNew.Checked)
             {
                 pNewPermission.Enabled = false;
@@ -115,6 +115,31 @@ namespace BankSystem_Currencies
             {
                 if (rbAnswer.Checked)
                 {
+                  
+                     if (rbAnswer == rbYes)
+                     {
+                        if (cbManageClients.Checked)
+                            cbManageClients.Checked = false;
+                        if (cbClientTransactions.Checked)
+                            cbClientTransactions.Checked = false;
+                        if (cbManageUsers.Checked)
+                            cbManageUsers.Checked = false;
+                        if (cbCurrencyExchange.Checked)
+                            cbCurrencyExchange.Checked = false;
+                     }
+
+                     if (rbAnswer == rbYesNew)
+                     {
+                        if (cbNewManageClients.Checked)
+                            cbNewManageClients.Checked = false;
+                        if (cbNewClientTransactions.Checked)
+                            cbNewClientTransactions.Checked = false;
+                        if (cbNewManageUsers.Checked)
+                            cbNewManageUsers.Checked = false;
+                        if (cbNewCurrencyExchange.Checked)
+                            cbNewCurrencyExchange.Checked = false;
+
+                     }
                     PermissionsUser = -1;
                     pNewPermission.Enabled = false;
                 }
@@ -147,10 +172,11 @@ namespace BankSystem_Currencies
 
             if (cbPermission == cbManageClients || cbPermission == cbNewManageClients)
             {
+
                 if (cbPermission.Checked)
                     PermissionsUser += (int)enPermission.eManageClients;
                 else
-                    PermissionsUser -= (int)enPermission.eManageClients;
+                    PermissionsUser -= (int)enPermission.eManageClients;    
             }
 
             if (cbPermission == cbClientTransactions || cbPermission == cbNewClientTransactions)
@@ -158,7 +184,7 @@ namespace BankSystem_Currencies
                 if (cbPermission.Checked)
                     PermissionsUser += (int)enPermission.eClientTransactions;
                 else
-                    PermissionsUser -= (int)enPermission.eClientTransactions;
+                    PermissionsUser -= (int)enPermission.eClientTransactions;        
             }
 
             if (cbPermission == cbManageUsers || cbPermission == cbNewManageUsers)
@@ -168,7 +194,6 @@ namespace BankSystem_Currencies
 
                 else
                     PermissionsUser -= (int)enPermission.eManageUsers;
-
             }
 
             if (cbPermission == cbCurrencyExchange || cbPermission == cbNewCurrencyExchange)
@@ -176,7 +201,7 @@ namespace BankSystem_Currencies
                 if (cbPermission.Checked)
                     PermissionsUser += (int)enPermission.eCurrencyExchange;
                 else
-                    PermissionsUser -= (int)enPermission.eCurrencyExchange;
+                    PermissionsUser -= (int)enPermission.eCurrencyExchange;            
             }
         }
 
@@ -187,8 +212,7 @@ namespace BankSystem_Currencies
             if (string.IsNullOrWhiteSpace(txtInput.Text))
             {
                 e.Cancel = true;
-                txtInput.Focus();
-                epUser.SetError(txtInput, "Invalid " + txtInput.Name + "!");
+                epUser.SetError(txtInput, "Invalid Champ Should Be a Value!");
             }
             else
             {
@@ -207,7 +231,6 @@ namespace BankSystem_Currencies
             if (string.IsNullOrWhiteSpace(txtEmails.Text) || !txtEmails.Text.Contains("@") || !txtEmails.Text.Contains(".com"))
             {
                 e.Cancel = true;
-                txtEmails.Focus();
                 epUser.SetError(txtEmails, "example@example.com");
             }
             else
@@ -227,7 +250,6 @@ namespace BankSystem_Currencies
             if (!int.TryParse(txtPhones.Text, out Number) || (!txtPhones.Text.Contains("0")))
             {
                 e.Cancel = true;
-                txtPhones.Focus();
                 epUser.SetError(txtPhones, "0555555555");
             }
             else
@@ -347,5 +369,6 @@ namespace BankSystem_Currencies
                 }
             }
         }
+
     }
 }

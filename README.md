@@ -1,7 +1,7 @@
 <h1> 🏦 Bank System App </h1>
 
-A <h6>C# Windows Forms</h6> application that simulates a professional <h5>banking system</h5> with full support for <h5>client management, user permissions, transactions, and currency exchange</h5>.  
-This project follows the <h5>3-Tier Architecture (DAL - BL - PL)</h5> and uses <h5>SQL Server</h5> for data storage.
+A *C# Windows Forms* application that simulates a professional **banking system** with full support for *client management, user permissions, transactions, and currency exchange*.  
+This project follows the **3-Tier Architecture (DAL - BL - PL)** and uses **SQL Server** for data storage.
 
 <h2>🚀 Features</h2> 
 

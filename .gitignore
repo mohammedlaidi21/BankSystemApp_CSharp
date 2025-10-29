@@ -1,0 +1,17 @@
+bin/
+obj/
+.vs/
+*.exe
+*.dll
+*.pdb
+*.user
+*.suo
+*.cache
+*.log
+packages/
+*.mdf
+*.ldf
+*.tmp
+*.bak
+*.dbmdl
+*.opendb
